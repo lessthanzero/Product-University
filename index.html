@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--  мета-информация  -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coffee Company</title>
+    <style>
+        body {
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.holder {
+  box-sizing: border-box;
+  width: 375px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.selector {
+  display: block;
+  border-bottom: solid #fff 1px;
+  margin-bottom: 8px;
+/*   border-radius: 0; */
+  background: none;
+}
+
+.selector > span {
+  box-sizing: border-box;
+  font-size: 20px;
+  line-height: 24px;
+/*   border-bottom: solid transparent 4px; */
+  cursor: pointer;
+}
+
+.selector > span.active {
+  border-bottom: solid white 4px;
+}
+
+input {
+  box-sizing: border-box;
+  height: 56px;
+  padding: 16px;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+button {
+  height: 56px;
+  font-size: 20px;
+  line-height: 24px;
+  background: yellow;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.forgot {
+  display: block;
+  width: auto;
+  text-align: center;
+  margin: 0 auto 20px;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+
+    <!--  FB button  -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0&appId=764747867269516&autoLogAppEvents=1"></script>
+
+    <div class="holder">
+
+        <!--     <img src="" alt="" class="logo"> -->
+
+        <h1>Coffee Company</h1>
+
+        <!--   Переключалка   -->
+        <div class='selector'>
+            <span value="Log in" class='active'>Log in</span>
+            <span value="Sign up">Sign up</span>
+        </div>
+
+        <input type="text" placeholder="Email" />
+
+        <input type="password" placeholder="Password" />
+
+        <p class='forgot'>Don't remember your password?</p>
+
+        <button>Start ordering coffee</button>
+
+        <div class="fb-login-button" data-width="343" data-size="large" data-button-type="login_with"
+            data-auto-logout-link="false" data-use-continue-as="false"></div>
+
+    </div>
+</body>
+
+</html>
